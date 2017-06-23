@@ -1,0 +1,17 @@
+#!/bin/bash
+cd #Argumento 1: Minuto (0-59)
+#Argumento 2: Hora (0-23)
+#Argumento 3: Día de la mes (1-31)
+#Argumento 4: Mes (1-12)
+#Argumento 5: Días de la Semana (0-6) Domingo = 0
+#Argumento 6: ¿Que se va a ejecutar? es decir el comando
+
+#Actualizacion de repositorio GITHUB
+0 20 * * 1-4 sh /home/diego/os/scripgit/gitpush.sh
+30 17 * * 5 sh /home/diego/os/scripgit/gitpush.sh
+
+
+#Informacion de una Alerta antes de subir al GITHUB
+58 19 * * 1-4 sh /home/diego/os/scripgit/alert.sh
+28 17 * * 5 sh /home/diego/os/scripgit/alert.sh
+
